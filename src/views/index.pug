@@ -1,0 +1,23 @@
+doctype html
+html 
+  head 
+    title= title 
+    link(rel='stylesheet', href='/public/css/bootstrap.min.css')
+    script(src='/public/js/jquery.min.js')
+    script(src="/public/scripts/app.js")
+  body(class='d-flex flex-column align-items-center justify-content-center vh-100 mt-4')
+    input(type="text" name="link" placeholder="Enter your link here" onsubmit="createBookmark()")
+    ul 
+      each entry in entries
+        li
+          | #{entry.id}. 
+          a(href=entry.link)= entry.link 
+          |  - #{entry.time_ago}
+          input(type='hidden', name='id', value=entry.id)
+          |  
+          button(type='button', class='btn btn-danger btn-sm delete-btn', data-id=entry.id, onclick="deleteBookmark(this)") X
+
+    //- script.
+
+
+    script(src='/public/js/bootstrap.bundle.min.js')
