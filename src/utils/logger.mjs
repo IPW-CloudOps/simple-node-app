@@ -8,7 +8,7 @@ const logger = winston.createLogger({
       return `${level}: ${message} --- ${service}`;
     })
   ),
-  defaultMeta: { service: 'bookmark-app-' + (process.env.POD_HOSTNAME ?? "UNKNOWN-POD") },
+  defaultMeta: { service: 'bookmark-app-' + (process.env.POD_NAME ?? "UNKNOWN-POD") },
   transports: [
     new winston.transports.Console()
   ],
