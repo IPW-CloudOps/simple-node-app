@@ -12,8 +12,8 @@ This is a simple Node app using:
 
 1. Run `yarn install`
 1. Copy the `.env_copy` file, rename it to `.env` and fill in the necessary environment variables:
-  - `POD_NAME`: it's recommended to use `local`
-  - `PORT`: you can either delete it - as it defaults to `3838` - or you can set it to any port you like (but make sure it's not in use!)
+    - `POD_NAME`: it's recommended to use `local`
+    - `PORT`: you can either delete it - as it defaults to `3838` - or you can set it to any port you like (but make sure it's not in use!)
 1. Run `npm run dev`
 1. Navigate to `http://127.0.0.1:PORT`
 
