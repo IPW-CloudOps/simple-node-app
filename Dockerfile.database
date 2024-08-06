@@ -1,0 +1,11 @@
+FROM mariadb:latest
+
+ENV MARIADB_ROOT_PASSWORD=ipw
+ENV MARIADB_DATABASE=ipw
+
+# Creates a volume each time a container is created from this image
+# Not exactly useful imho...
+# VOLUME /var/lib/mysql
+
+# docker build --tag ipw/node-db -f Dockerfile.database .
+# docker run --name ipw-node-db --network ipw ipw/node-db
